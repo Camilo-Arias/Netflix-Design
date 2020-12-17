@@ -46,14 +46,12 @@ a {
 
 .navigation-item {
   list-style: none;
-  /* border: 1px solid red; */
   text-align: center;
 }
 
 .navigation {
   padding: 0;
   margin: 0;
-  /* border: 1px solid red; */
   display: grid;
   grid-auto-columns: 100px;
   grid-auto-flow: column;
@@ -67,7 +65,6 @@ a {
 }
 
 .featured-details {
-  /* border: 1px solid red; */
   position: absolute;
   bottom: 0;
   left: 0;
@@ -76,7 +73,6 @@ a {
 }
 
 .tags {
-  /* border: 1px solid yellow; */
   display: flex;
   justify-content: center;
   gap: 10px;
@@ -107,9 +103,51 @@ a {
 }
 
 .button {
-  border: 1px solid blue;
+  background: white;
+  display: flex;
+  align-items: center;
+  padding: 5px 1em 5px 0.5em;
+  border-radius: 3px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.button::before {
+  content: '';
+  display: inline-block;
+  width: 25px;
+  height: 25px;
+  margin-right: 5px;
 }
 
 .button-secondary {
-  border: 1px solid red;
+  color: white;
+  background: none;
+  font-size: 1.1em;
+
+  min-width: 100px;
+  cursor: pointer;
+  border: none;
+}
+
+.button-secondary::before {
+  content: '';
+  display: block;
+  width: 25px;
+  height: 25px;
+  margin: auto;
+  margin-bottom: 5px;
+}
+
+.icon-plus::before {
+  background: url('../../images/icons/plus.svg');
+}
+
+.icon-play::before {
+  background: url('../../images/icons/play.svg');
+}
+
+.icon-info::before {
+  background: url('../../images/icons/info.svg');
 }
