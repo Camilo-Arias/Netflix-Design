@@ -30,6 +30,7 @@ body {
   color: white;
   margin: 0;
   font-family: Netflix;
+  /* padding-bottom: 95px; */
 }
 
 a {
@@ -152,7 +153,6 @@ a {
 }
 
 .list-content {
-  border: 1px solid red;
   white-space: nowrap;
   overflow-x: auto;
 }
@@ -174,10 +174,59 @@ a {
   border-radius: 5px;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .footer {
-  border: 1px solid red;
-  position: fixed;
+  position: sticky;
   bottom: 0;
   left: 0;
   right: 0;
+  background: black;
+  padding: 1em 0 0;
 }
+
+.tab-list {
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-auto-flow: column;
+  list-style: none;
+  color: #6e6e6e;
+}
+
+.tab-list a {
+  color: #6e6e6e;
+}
+
+.tab-item {
+  text-align: center;
+  font-size: 0.9em;
+  padding-bottom: 0.5em;
+}
+
+.tab-item svg {
+  display: block;
+  margin: auto;
+}
+
+.tab-item path {
+  fill: #6e6e6e;
+}
+
+.tab-item:hover span,
+.tab-item:hover path {
+  fill: white;
+  color: white;
+}
+
+/* Este pseudo selector permite aplicar diseño a dos etiquetas con solo una instancia, lamentablemente aún no tiene
+soporte en todos los navegadores */
+
+/* .tab-item:hover :is(path, span) {
+  fill: white;
+  color: white;
+} */
